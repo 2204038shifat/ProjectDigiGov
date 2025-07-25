@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.
+com"></script>
+    <!-- Google Fonts - Inter -->
+    <link
+      href="https://fonts.googleapis.
+com/css2?family=Inter:wght@300;400;
+500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <section
+      id="general-application-form"
+      class="container mx-auto py-16 px-4 bg-white rounded-lg shadow-md mb-8"
+    >
+      <h3 class="text-3xl font-bold text-center mb-12 text-blue-700">
+        General Service Application Form
+      </h3>
+      <p class="text-center text-lg text-gray-700 mb-10 max-w-3xl mx-auto">
+        Please fill out the form below to apply for the selected service. All
+        fields marked with an asterisk (<span class="text-red-500">*</span>) are
+        required.
+      </p>
+      <div class="max-w-4xl mx-auto bg-gray-50 p-8 rounded-lg shadow-md">
+        <form
+         action="../section/payment-page.html"
+         method="get"
+          class="grid grid-cols-1 md:grid-cols-2 gap-6"
+          
+        >
+          <!-- Personal Information 
+-->
+          <div class="md:col-span-2">
+            <h4 class="text-xl font-semibold text-gray-900 mb-4 border-b pb-2">
+              Personal Information
+            </h4>
+          </div>
+          <div>
+            <label
+              for="ga-full-name"
+              class="block text-sm font-medium text-gray-700 mb-1 required"
+              >Full Name</label
+            >
+            <input
+              type="text"
+              id="ga-full-name"
+              name="ga-full-name"
+              class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+              placeholder="Your 
+Full Name"
+              required
+            />
+          </div>
+          <div>
+            <label
+              for="ga-dob"
+              class="block text-sm font-medium text-gray-700 mb-1 required"
+              >Date of Birth</label
+            >
+            <input
+              type="date"
+              id="ga-dob"
+              name="ga-dob"
+              class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+              required
+            />
+          </div>
+          <div>
+            <label
+              for="ga-gender"
+              class="block text-sm font-medium text-gray-700 mb-1 required"
+              >Gender</label
+            >
+            <select
+              id="ga-gender"
+              name="ga-gender"
+              class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md"
+              required
+            >
+              <option value="">Select Gender</option>
+              <option value="male">Male< /option></option>
+
+              <option value="female">Fem ale</option>
+              <option value="other">Othe r</option>
+            </select>
+          </div>
+          <div>
+            <label
+              for="ga-nid"
+              class="block text-sm font-medium text-gray-700 mb-1 required"
+              >National ID Number</label
+            >
+            <input
+              type="text"
+              id="ga-nid"
+              name="ga-nid"
+              class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+              placeholder="e.g., 
+1234567890"
+              required
+            />
+          </div>
+          <div class="md:col-span-2">
+            <label
+              for="ga-address"
+              class="block text-sm font-medium text-gray-700 mb-1 required"
+              >Current Address</label
+            >
+            <textarea
+              id="ga-address"
+              name="ga-address"
+              rows="3"
+              class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+              placeholder="Street, 
+City, Post Code"
+              required
+            ></textarea>
+          </div>
+          <!-- Document Uploads -->
+          <div class="md:col-span-2 mt-6">
+            <h4 class="text-xl font-semibold text-gray-900 mb-4 border-b pb-2">
+              Document Uploads
+            </h4>
+            <p class="text-sm text-gray-600 mb-4">
+              Please upload clear scans or photos of the required documents.
+            </p>
+          </div>
+          <div>
+            <label
+              for="ga-photo"
+              class="block text-sm font-medium text-gray-700 mb-1 required"
+              >Passport-siz ed Photo</label
+            >
+            <input
+              type="file"
+              id="ga-photo"
+              name="ga-photo"
+              accept="image/*"
+              class="mt-1 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
+              required
+            />
+          </div>
+          <div>
+            <label
+              for="ga-nid-scan"
+              class="block text-sm font-medium text-gray-700 mb-1 required"
+              >National ID Scan</label
+            >
+            <input
+              type="file"
+              id="ga-nid-scan"
+              name="ga-nid-scan"
+              accept="image/*,.pdf"
+              class="mt-1 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
+              required
+            />
+          </div>
+          <div class="md:col-span-2 text-right mt-8">
+            <button 
+              type="submit"
+              class="inline-flex justify-center py-3 px-8 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-300"
+            >
+              Submit Application
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <script src="../js/script.js"></script>
+  </body>
+</html>

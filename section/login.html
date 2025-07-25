@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link
+      href="https://fonts.googleapis.
+com/css2?family=Inter:wght@300;400;
+500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+</head>
+<body scroll-smooth relative>
+    <div id="background-slideshow" class="absolute inset-0 w-full h-full bg-cover bg-center transition-opacity duration-1000 opacity-100 z-0">
+
+        <!-- Login/Register Section with Background Slideshow -->
+  <section id="login-register" class="relative min-h-screen flex items-center justify-center overflow-hidden text-white py-16 px-4">
+    
+    <!-- Slideshow Background -->
+    <div id="bg-slideshow" class="absolute inset-0 w-full h-full bg-cover bg-center transition-opacity duration-1000 z-0"></div>
+
+    <!-- Optional dark overlay for better contrast -->
+    <div class="absolute inset-0 bg-black/40 z-10"></div>
+
+    <!-- Login/Register Content -->
+    <div class="relative z-20 container mx-auto max-w-md text-center">
+      <h3 class="text-3xl font-bold mb-8">Login or Register</h3>
+      <div class="bg-white p-8 rounded-lg shadow-xl text-gray-800">
+        <h4 class="text-2xl font-semibold mb-6 text-blue-700">Login to Your Account</h4>
+        <form class="space-y-4">
+          <div>
+            <label for="username" class="sr-only">Username or Email</label>
+            <input type="text" id="username" name="username" class="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="Username or Email">
+          </div>
+          <div>
+            <label for="password" class="sr-only">Password</label>
+            <input type="password" id="password" name="password" class="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="Password">
+          </div>
+          <button type="submit" class="w-full inline-flex justify-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-300">
+            Login
+          </button>
+        </form>
+        <div class="mt-6 text-sm">
+          <p class="mb-2">Don't have an account? <a href="javascript:void(0);" class="text-blue-600 hover:underline font-medium">Register Here</a></p>
+          <p><a href="javascript:void(0);" class="text-blue-600 hover:underline font-medium">Forgot Password?</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+  <script src="../js/script.js"></script>
+</body>
+</html>
