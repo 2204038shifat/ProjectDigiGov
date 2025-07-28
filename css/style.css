@@ -4,8 +4,13 @@ html{
     
      body {
          font-family: 'Inter', sans-serif;
-         background-color: #f0f2f5; /* Light grey background */
-         scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+        background: #2A7B9B;
+        background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+
+         /* background: #2A7B9B;
+         background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%); */
+         /* background-color: #f0f2f5;
+         scroll-behavior: smooth;  */
      }
      /* Custom scrollbar for better aesthetics */
      ::-webkit-scrollbar {
@@ -31,4 +36,9 @@ html{
      /* Initially hide all sections except the first one (handled by JS) */
      section:not(#home) {
          display: block;
+     }
+     .Background{
+
+         background: #2A7B9B;
+background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
      }
