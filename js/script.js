@@ -1,45 +1,32 @@
+//    ->  hero Selection  <-
 
-                    //    ->  hero Selection  <-
+document.addEventListener("DOMContentLoaded", function () {
+    const slideshow = document.getElementById('background-slideshow');
+    if (!slideshow) return; // Ensure element exists
 
-   document.addEventListener("DOMContentLoaded",function()
-  {
-    const slideshow=document.getElementById('background-slideshow');
-  })
-                    
+    const images = [
+        "url('../image/a.jpeg')",
+        "url('../image/b.jpg')",
+        "url('../image/c.jpeg')"
+    ];
 
+    let currentIndex = 0;
 
-  const images = [
-    "url('../image/a.jpeg')",
-    "url('../image/b.jpg')",
-    "url('../image/c.jpeg')"
-  ];
-
-  let currentIndex = 0;
-  const slideshow = document.getElementById('background-slideshow');
-
-  function changeBackground() {
-
-    slideshow.style.opacity='0';
+    function changeBackground() {
+        slideshow.style.transition = 'opacity 0.4s'; // Add smooth transition if not set in CSS
+        slideshow.style.opacity = '0';
         setTimeout(() => {
-      slideshow.style.backgroundImage = images[currentIndex];
-      currentIndex = (currentIndex + 1) % images.length;
+            slideshow.style.backgroundImage = images[currentIndex];
+            currentIndex = (currentIndex + 1) % images.length;
+            slideshow.style.opacity = '1';
+        }, 400);
+    }
 
-      // Fade in
-      slideshow.style.opacity = '100';
-    }, 400); 
+    changeBackground(); // initial
+    setInterval(changeBackground, 5000); // change every 5s
+});
 
-  }
-
-  changeBackground(); // initial
-  setInterval(changeBackground, 5000); // change every 5s
-
-
-
-  // payment
-
-  function redirectToPayemnt()
-  {
-    window.location.href='section/payment-page.html';
-  }
-
-
+// payment
+function redirectToPayment() {
+    window.location.href = 'section/payment-page.html';
+}

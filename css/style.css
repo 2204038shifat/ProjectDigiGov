@@ -1,6 +1,9 @@
 html{
     scroll-behavior: smooth;
 }
+#background-slideshow {
+  transition: opacity 0.4s;
+}
 
     /* for services */
 
