@@ -9,9 +9,9 @@
 
 
   const images = [
-    "url('../image/1.jpeg')",
-    "url('../image/2.jpg')",
-    "url('../image/3.jpeg')"
+    "url('../image/a.jpeg')",
+    "url('../image/b.jpg')",
+    "url('../image/c.jpeg')"
   ];
 
   let currentIndex = 0;
