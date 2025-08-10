@@ -4,16 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Government Website</title>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Services Mind Map</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts - Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="css/style.css">
-</head>
-<body id="home" class="text-gray-800 scroll-smooth">
 
+    <!-- Google Fonts - Inter -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+     -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body id="home" class="scroll-smooth">
+   <div id="Background">
     <!-- Header Section -->
-    <header class="bg-green-700 text-white p-4 shadow-md sticky top-0 z-50">
+    <header class="bg text-white p-4 shadow-md sticky top-0 z-50">
         <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
             <div class="flex items-center mb-4 md:mb-0">
                 <!-- Placeholder for government logo -->
@@ -23,10 +34,11 @@
             <nav>
                 <ul class="flex flex-wrap justify-center space-x-4 md:space-x-6 text-lg">
                     <li><a href="#home" class="hover:text-blue-200 transition duration-300">Home</a></li>
-                    <li><a href="#services-page" class="hover:text-blue-200 transition duration-300">Services</a></li>
+                    <!-- <li><a href="#services-page" class="hover:text-blue-200 transition duration-300">Services</a></li> -->
                     <li><a href="#about-us" class="hover:text-blue-200 transition duration-300">About Us</a></li>
-                    <li><a href="section/contact.html" class="hover:text-blue-200 transition duration-300">Contact</a></li>
-                    <li><a href="section/faqs.html" class="hover:text-blue-200 transition duration-300">FAQs</a></li>
+                    <!-- <li><a href="section/contact.html" class="hover:text-blue-200 transition duration-300">Contact</a></li> -->
+                    <!-- <li><a href="section/faqs.html" class="hover:text-blue-200 transition duration-300">FAQs</a></li>
+                     -->
                     <li><a href="section/complaint.html" class="hover:text-blue-200 transition duration-300">Complaint</a></li>
                     <li><a href="section/User-Dashboard.html" class="hover:text-blue-200 transition duration-300">Dashboard</a></li>
                     <li><a href="section/login.html" class="bg-green-600 px-4 py-2 rounded-full hover:bg-blue-800 transition duration-300 shadow-md">Login</a></li>
@@ -51,9 +63,9 @@
   <div class="relative z-20 container px-4">
     <h2 class="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">Your Gateway to Public Services</h2>
     <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
-      Access essential government services, information, and resources easily and efficiently.
+      <!-- Access essential government services, information, and resources easily and efficiently. -->
     </p>
-    <a href="#services-overview" class="bg-white text-blue-700 font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 transition duration-300 transform hover:scale-105 cursor-pointer">
+    <a href="#services-page" class="bg-white text-blue-700 font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 transition duration-300 transform hover:scale-105 cursor-pointer">
       Explore Services
     </a>
   </div>
@@ -62,145 +74,150 @@
 
 
     <!-- Services Overview Section (Refined for Landing Page) -->
-    <section id="services-overview" class= "container mx-auto py-16 px-4">
-        <h3 class="text-3xl font-bold text-center mb-12 text-blue-700">Key Services Highlights</h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <!-- Citizen Services -->
-            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:scale-105">
-                <div class="flex items-center mb-4">
-                    <!-- Icon for Citizen Services (User Group) -->
-                    <svg class="w-10 h-10 text-blue-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H2v-2a3 3 0 015.356-1.857M17 20v-2c0-.185-.015-.37-.04-.552m0 0A3 3 0 0014.854 10.15L11 12.5m-8.5-6.5h15m-12 0v-2a3 3 0 00-5.356-1.857M3 12v-2c0-.185.015-.37.04-.552m0 0A3 3 0 016.146 10.15L10 12.5m-8.5 6.5h15m-12 0v-2a3 3 0 00-5.356-1.857M3 12v-2c0-.185.015-.37.04-.552m0 0A3 3 0 016.146 10.15L10 12.5"></path></svg>
-                    <h4 class="text-xl font-semibold text-gray-900">Citizen Services</h4>
-                </div>
-                <p class="text-gray-600">Access essential services for individuals, including ID, permits, and social benefits.</p>
-                <a href="#services-page" class="mt-4 inline-block text-blue-600 hover:text-blue-800 font-medium transition duration-300">Explore Citizen Services &rarr;</a>
-            </div>
-
-            <!--  Business Services -->
-            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:scale-105">
-                <div class="flex items-center mb-4">
-                    <!-- Icon for Business Services (Briefcase) -->
-                    <svg class="w-10 h-10 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-1.28-8.455-3.245m16.91 0c.75.056 1.44.385 2.02.915.58.53.91 1.252.91 2.02v5.5c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2v-5.5c0-.768.33-1.49.91-2.02.58-.53 1.27-.859 2.02-.915m16.91 0L12 10l-9.455 3.255"></path></svg>
-                    <h4 class="text-xl font-semibold text-gray-900">Business Services</h4>
-                </div>
-                <p class="text-gray-600">Find resources for business registration, licenses, and corporate tax information.</p>
-                <a href="#Citizen" class="mt-4 inline-block text-blue-600 hover:text-blue-800 font-medium transition duration-300">Explore Business Services &rarr;</a>
-            </div>
-        </div>
-    </section>
+    
 
     <!-- Services Page (Full Details with Icons) -->
-    <section id="services-page" class="Background container mx-auto py-16 px-4 bg-blue-50 rounded-lg mb-8">
-        <h3 class="text-3xl font-bold text-center mb-12 text-blue-700">All Government Services</h3>
-        <!-- <p class="text-center text-lg text-gray-700 mb-10 max-w-3xl mx-auto">
-            Explore the full range of services provided by the government, categorized for your convenience.
-        </p> -->
 
-        <!-- Citizen Services Category -->
-        <div id="Citizen" class="mb-12">
-            <h4 class="text-2xl font-semibold text-blue-800 mb-6 text-center">For Citizens</h4>
-            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-                <!-- ID & Passport Applications (Links to General Application Form) -->
-                <a href="section/general-application-form.html" class="flex flex-col items-center justify-center p-4 bg-blue-50 rounded-lg shadow-sm hover:shadow-md transition duration-300 transform hover:scale-105 text-center">
-                    <svg class="w-12 h-12 text-blue-600 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0H9m7 0h-1M9 11h4m-4 4h4m-4 0h.01M16 16h.01"></path></svg>
-                    <span class="text-sm font-medium text-gray-800">ID & Passport Applications</span>
-                </a>
-                <!--  Birth/Death Certificates -->
-                <a href="section/general-application-form.html" class="flex flex-col items-center justify-center p-4 bg-blue-50 rounded-lg shadow-sm hover:shadow-md transition duration-300 transform hover:scale-105 text-center">
-                    <svg class="w-12 h-12 text-blue-600 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
-                    <span class="text-sm font-medium text-gray-800">Birth/Death Certificates</span>
-                </a>
-                <!--  Tax Filing & Info -->
-                <a href="section/general-application-form.html" class="flex flex-col items-center justify-center p-4 bg-blue-50 rounded-lg shadow-sm hover:shadow-md transition duration-300 transform hover:scale-105
-               text-center">
-                    <svg class="w-12 h-12 text-blue-600 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16m-4-4h8M5 12h8m-8 4h8M19 4h-2a2 2 0 00-2 2v10a2 2 0 002 2h2a2 2 0 002-2V6a2 2 0 00-2-2z"></path></svg>
-                    <span class="text-sm font-medium text-gray-800">Tax Filing & Information</span>
-                </a>
-                <!-- Social Security Benefits -->
-                <a href="section/general-application-form.html" class="flex flex-col items-center justify-center p-4 bg-blue-50 rounded-lg shadow-sm hover:shadow-md transition duration-300 transform hover:scale-105 text-center">
-                    <svg class="w-12 h-12 text-blue-600 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.105 0 2 .895 2 2v2a2 2 0 01-2 2m0 0a2 2 0 00-2 2v2a2 2 0 002 2M5 9a2 2 0 012-2h10a2 2 0 012 2v6a2 2 0 01-2 2H7a2 2 0 01-2-2V9z"></path></svg>
-                    <span class="text-sm font-medium text-gray-800">Social Security Benefits</span>
-                </a>
-                <!--  Voter Registration -->
-                <a href="section/general-application-form.html" class="flex flex-col items-center justify-center p-4 bg-blue-50 rounded-lg shadow-sm hover:shadow-md transition duration-300 transform hover:scale-105 text-center">
-                    <svg class="w-12 h-12 text-blue-600 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14v6m-3-3h6M6 10h2m-2 4h2m-2 4h2m-2 4h2m-2 4h2m-2 4h2m-2 4h2M6 6h2m-2 4h2m-2 4h2m-2 4h2m-2 4h2m-2 4h2m-2 4h2m-2 4h2M12 2a10 10 0 100 20 10 10 0 000-20z"></path></svg>
-                    <span class="text-sm font-medium text-gray-800">Voter Registration</span>
-                </a>
-                <!-- Add more citizen services here -->
-            </div>
+   <section id="services-page" class=" Background container mx-auto py-16 px-4 rounded-lg mb-8 mt-28">
+        <h3 class="text-3xl font-bold text-center mb-12">All Government Services</h3>
+
+
+
+    <div class="body ">
+            <!-- Decorative Background Elements -->
+    <div class="deco deco-1"></div>
+    <div class="deco deco-2"></div>
+    <div class="deco-dots deco-dots-1"></div>
+    <div class="deco-dots deco-dots-2"></div>
+
+    <!-- Main Mind Map Container -->
+    <div class="mind-map-container">
+
+        <!-- Central Element -->
+        <div class="center-circle">
+            সেবা সমূহ
         </div>
 
-        <!-- Business Services Category -->
-        <div class="mb-12">
-            <h4 class="text-2xl font-semibold text-green-800 mb-6 text-center">For Businesses</h4>
-            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-                <!--  Business Registration (Links to Business Application Form) -->
-                <a href="section/buisness-registration-form.html" class="flex flex-col items-center justify-center p-4 bg-green-50 rounded-lg shadow-sm hover:shadow-md transition duration-300 transform hover:scale-105 text-center">
-                    <svg class="w-12 h-12 text-green-600 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2H7a2 2 0 00-2 2v2m14 0h.01M12 15h.01"></path></svg>
-                    <span class="text-sm font-medium text-gray-800">Business Registration</span>
-                </a>
-                <!-- Permits & Licenses -->
-                <a href="section/buisness-registration-form.html" class="flex flex-col items-center justify-center p-4 bg-green-50 rounded-lg shadow-sm hover:shadow-md transition duration-300 transform hover:scale-105 text-center">
-                    <svg class="w-12 h-12 text-green-600 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-                    <span class="text-sm font-medium text-gray-800">Permits & Licenses</span>
-                </a>
-                <!-- Corporate Tax Services -->
-                <a href="section/buisness-registration-form.html" class="flex flex-col items-center justify-center p-4 bg-green-50 rounded-lg shadow-sm hover:shadow-md transition duration-300 transform hover:scale-105 text-center">
-                    <svg class="w-12 h-12 text-green-600 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2z"></path></svg>
-                    <span class="text-sm font-medium text-gray-800">Corporate Tax Services</span>
-                </a>
-                <!--  Export/Import Regulations -->
-                <a href="section/buisness-registration-form.html" class="flex flex-col items-center justify-center p-4 bg-green-50 rounded-lg shadow-sm hover:shadow-md transition duration-300 transform hover:scale-105 text-center">
-                    <svg class="w-12 h-12 text-green-600 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
-                    <span class="text-sm font-medium text-gray-800">Export/Import Regulations</span>
-                </a>
-                <!--  Government Contracts -->
-                <a href="section/buisness-registration-form.html" class="flex flex-col items-center justify-center p-4 bg-green-50 rounded-lg shadow-sm hover:shadow-md transition duration-300 transform hover:scale-105 text-center">
-                    <svg class="w-12 h-12 text-green-600 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
-                    <span class="text-sm font-medium text-gray-800">Government Contracts</span>
-                </a>
-                <!-- Add more business services here -->
-            </div>
+        <!-- Arrows (visible on desktop) -->
+        <div class="arrow arrow-1"></div>
+        <div class="arrow arrow-2"></div>
+        <div class="arrow arrow-3"></div>
+        <div class="arrow arrow-4"></div>
+        <div class="arrow arrow-5"></div>
+        <div class="arrow arrow-6"></div>
+
+        <!-- Service Cards with Inline SVG Icons -->
+        <div class="service-card card-1" onclick="location.href='section/MarriageCirtificate.html'">
+          
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 12C13.6569 12 15 10.6569 15 9C15 7.34315 13.6569 6 12 6C10.3431 6 9 7.34315 9 9C9 10.6569 10.3431 12 12 12Z" stroke="#F472B6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19 21C19 17.134 15.866 14 12 14C8.13401 14 5 17.134 5 21" stroke="#F472B6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12.5 6.04199C14.0339 6.20059 15.4622 6.87531 16.583 7.91699" stroke="#4F46E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M17.5 9C17.5 10.6569 16.1569 12 14.5 12C13.5627 12 12.7337 11.5353 12.1695 10.8305" stroke="#4F46E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 21C5 17.134 8.13401 14 12 14C13.2953 14 14.5117 14.329 15.545 14.897" stroke="#4F46E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <p>বিবাহিত আবেদন</p>
         </div>
+
+        <div class="service-card card-2" onclick="location.href='section/characteristics.html'">
+          
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="#A78BFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 2V8H20" stroke="#A78BFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 18C14.2091 18 16 16.2091 16 14C16 11.7909 14.2091 10 12 10C9.79086 10 8 11.7909 8 14C8 16.2091 9.79086 18 12 18Z" stroke="#A78BFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 12.5V14.5" stroke="#A78BFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.5 15.5L12 14.5" stroke="#A78BFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <p>চারিত্রিক আবেদন</p>
+        </div>
+        
+        <div class="service-card card-3" onclick="location.href='section/DeathCirtificate.html'">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="#34D399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 2V8H20" stroke="#34D399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 13H8" stroke="#34D399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 17H8" stroke="#34D399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 9H8" stroke="#34D399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <p>মৃত্যু আবেদন</p>
+        </div>
+
+        <div class="service-card card-4" onclick="location.href='section/citizen.html'">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 21V19C17 16.7909 15.2091 15 13 15H8C5.79086 15 4 16.7909 4 19V21" stroke="#60A5FA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.5 11C12.433 11 14 9.433 14 7.5C14 5.567 12.433 4 10.5 4C8.567 4 7 5.567 7 7.5C7 9.433 8.567 11 10.5 11Z" stroke="#60A5FA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19 8C20.1046 8 21 7.10457 21 6C21 4.89543 20.1046 4 19 4C17.8954 4 17 4.89543 17 6C17 7.10457 17.8954 8 19 8Z" stroke="#60A5FA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 14V12C22 10.3431 20.6569 9 19 9C18.5361 9 18.1069 9.10391 17.7262 9.28638" stroke="#60A5FA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <p>নাগরিক আবেদন</p>
+        </div>
+
+        <div class="service-card card-5" onclick="location.href='section/disabilityCirtificate.html'">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.5 4.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z" fill="#F87171"/><path d="M12 12.467V18h2.5l2.8-4.2L19 15v-2.5h-2.5l-2.15-3.225A2.5 2.5 0 0 0 10.5 8H7.333L6 11.333V18H4v-6.5L6.5 6H10a4 4 0 0 1 3.464 2.008L14.533 10H19v-2.5h-3.333l-.9-1.35A5.5 5.5 0 0 0 10 4.5H6.5a1.5 1.5 0 0 0-1.4.9L3.5 8.5V19.5a1.5 1.5 0 0 0 1.5 1.5H8v-5.5L7.333 14H10v5.5h6.5a1.5 1.5 0 0 0 1.5-1.5V14l-1.8-1.8.8-1.2H19a1.5 1.5 0 0 1 1.5 1.5V15a1.5 1.5 0 0 1-1.5 1.5h-.5v2.5a1.5 1.5 0 0 1-1.5 1.5h-10A1.5 1.5 0 0 1 4 19.5V19h4v2.5h6.5a1.5 1.5 0 0 0 1.5-1.5V18h-2.5v-5.5H12Z" fill="#F87171"/></svg>
+            <p>প্রতিবন্ধী আবেদন</p>
+        </div>
+        
+        <div class="service-card card-6" onclick="location.href='section/NewHoldingCirtificate.html'">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="#FBBF24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 22V12H15V22" stroke="#FBBF24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <p>নতুন হোল্ডিং আবেদন</p>
+        </div>
+    </div>
+    
+
+    </div>
+        
+
     </section>
 
     <!-- About Us / Departments Page -->
-    <section id="about-us" class="Background container mx-auto py-16 px-4 bg-gray-100 rounded-lg mb-8">
-        <h3 class="text-3xl font-bold text-center mb-12 text-blue-700">About Our Government</h3>
-        <div class="max-w-4xl mx-auto text-lg text-gray-700 leading-relaxed">
-            <p class="mb-6">
-                Our government is committed to serving the public with transparency, efficiency, and integrity. We strive to create a prosperous and equitable society for all citizens through effective governance and innovative public services.
-            </p>
-            <p class="mb-6">
-                Established with the vision of fostering national development and ensuring the well-being of its people, our administration works tirelessly across various sectors. From economic growth to social welfare, environmental protection to technological advancement, every effort is geared towards building a stronger nation.
-            </p>
-            <h4 class="text-2xl font-semibold text-blue-700 mt-10 mb-6 text-center">Our Departments</h4>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="bg-white p-5 rounded-lg hover:shadow-lg hover:scale-90 transition-transform duration-300">
-                    <h5 class="font-bold text-xl text-gray-900 mb-2">Ministry of Finance</h5>
-                    <p class="text-gray-600">Manages the national budget, fiscal policy, and economic planning.</p>
-                </div>
-                <div class="bg-white p-5 rounded-lg hover:shadow-lg hover:scale-90 transition-transform duration-300">
-                    <h5 class="font-bold text-xl text-gray-900 mb-2">Ministry of Health</h5>
-                    <p class="text-gray-600">Oversees public health, healthcare services, and medical research.</p>
-                </div>
-                <div class="bg-white p-5 rounded-lg hover:shadow-lg hover:scale-90 transition-transform duration-300">
-                    <h5 class="font-bold text-xl text-gray-900 mb-2">Ministry of Education</h5>
-                    <p class="text-gray-600">Responsible for national education policy, schools, and higher learning.</p>
-                </div>
-                <div class="bg-white p-5 rounded-lg hover:shadow-lg hover:scale-90 transition-transform duration-300">
-                    <h5 class="font-bold text-xl text-gray-900 mb-2">Ministry of Interior</h5>
-                    <p class="text-gray-600">Handles public safety, law enforcement, and internal security.</p>
-                </div>
-            </div>
-            <div class="text-center mt-10">
-                <button class="bg-blue-600 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-blue-700 transition duration-300 transform hover:scale-105" onclick="alert('This would navigate to a full departments list!')">
-                    View All Departments
-                </button>
-            </div>
-        </div>
-    </section>
- 
+      
+     
+         
+
+
+   <section id="about-us" class=" px-6 rounded-lg max-w-6xl mx-auto mb-8 mt-28">
+  <h2 class="text-3xl font-bold text-center mb-14">About Us</h2>
+
+  <!-- Member 1: Image Left -->
+  <div class="flex flex-col md:flex-row items-center md:items-center gap-10 mt-40 mb-12 p-6 rounded-md transform transition duration-700 hover:scale-[1.01] hover:shadow-lg animate-fade-in-left">
+    <div class="w-full md:w-1/3">
+      <img class="rounded-full" src="image/image-1.jpg" alt="Majedul Khan Shifat" class="rounded-full shadow w-full object-cover">
+    </div>
+    <div class="w-full md:w-2/3 gap-10">
+      <h3 class="text-2xl font-bold mb-2">Majedul Khan Shifat</h3>
+      <p class="text-gray-400 mb-4">Frontend & Backend Developer</p>
+      <p class="text-gray-400 text-sm">
+        Responsible for the full-stack development of the government service portal. Designed RESTful APIs, handled form submission logic, and implemented dynamic content rendering.
+      </p>
+    </div>
+  </div>
+
+  <!-- Member 2: Image Right -->
+  <div class="flex flex-col md:flex-row-reverse items-center md:items-center gap-10 mb-12 p-6 rounded-lg transform transition duration-700 hover:scale-[1.01] hover:shadow-lg animate-fade-in-right">
+    <div class="w-full md:w-1/3">
+      <img src="https://i.pravatar.cc/300?img=33" alt="Rakib Hossain" class="rounded-full shadow-md w-full object-cover">
+    </div>
+    <div class="w-full md:w-2/3 text-right md:text-left mt-3">
+      <h3 class="text-2xl font-bold mb-2">Md. Mahfuj</h3>
+      <p class="text-gray-400 mb-4">UI/UX Designer</p>
+      <p class="text-gray-400 text-sm">
+        Focused on visual design, layout structure, and user experience optimization. Built responsive interfaces using TailwindCSS and created a smooth user journey across the site.
+      </p>
+    </div>
+  </div>
+
+  <!-- Member 3: Image Left -->
+  <div class="flex flex-col md:flex-row items-center md:items-center gap-10 mb-12 p-6 rounded-lg transform transition duration-700 hover:scale-[1.01] hover:shadow-lg animate-fade-in-left mt-5 mb-3">
+    <div class="w-full md:w-1/3">
+      <img src="image/image-2.jpg" alt="Nusrat Jahan" class="rounded-full shadow-md w-full object-cover">
+    </div>
+    <div class="w-full md:w-2/3">
+      <h3 class="text-2xl font-bold mb-2">Zahidul Islam Arif</h3>
+      <p class="text-gray-400 mb-4">Database Engineer</p>
+      <p class="text-gray-400 text-sm">
+        Designed and managed the backend database structure. Focused on data integrity, relational mapping, and secure handling of user information within service forms.
+      </p>
+    </div>
+  </div>
+
+  <!-- Member 4: Image Right -->
+  <div class="flex flex-col md:flex-row-reverse items-center md:items-center gap-10 p-6 rounded-lg transform transition duration-700 hover:scale-[1.01] hover:shadow-lg animate-fade-in-right mt-10 mb-40">
+    <div class="w-full md:w-1/3">
+      <img src="image/image-3.jpg" alt="Ayesha Akter" class="rounded-full shadow-md w-full object-cover">
+    </div>
+    <div class="w-full md:w-2/3 text-right md:text-left">
+      <h3 class="text-2xl font-bold mb-2">MD Sakib Alif</h3>
+      <p class="text-gray-400 mb-4">Content & Client-Side Developer</p>
+      <p class="text-gray-400 text-sm">
+        Structured all static and dynamic content, managed routing between pages, and built the JavaScript logic to connect user actions with proper service response.
+      </p>
+    </div>
+  </div>
+
+</section>
+
+
+
+         
+     
+    
     <!-- Footer Section -->
     <footer class="bg-gray-800 text-gray-300 py-8">
         <div class="container mx-auto px-4 text-center text-sm">
@@ -239,7 +256,7 @@
             <p>&copy; 2025 Government Name. All rights reserved.</p>
         </div>
     </footer>
-
+</div>
     <script src="js/script.js"></script>
 </body>
 </html>

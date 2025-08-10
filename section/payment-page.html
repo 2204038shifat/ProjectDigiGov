@@ -3,104 +3,146 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-      <script src="https://cdn.tailwindcss.
-com"></script>
-    <!-- Google Fonts - Inter -->
-    <link
-      href="https://fonts.googleapis.
-com/css2?family=Inter:wght@300;400;
-500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../css/style.css" />
-  </head>
+  <title>Payment Gateway</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts - Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      /* background-color: #f3f4f6;  */
+    }
+    .payment-panel {
+      animation: fadeIn 0.5s ease-out forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+      <link rel="stylesheet" href="../css/style.css" />
 </head>
-<body>
-      <section id="payment-page" class="Background container mx-auto py-16 px-4 bg-gray-100 rounded-lg shadow-md mb-8">
-        <h3 class="text-3xl font-bold text-center mb-12 text-blue-700">Payment Gateway</h3>
-        <p class="text-center text-lg text-gray-700 mb-10 max-w-3xl mx-auto">
-            Please complete your payment to finalize your application.
-        </p>
+<body id="Background" class="scroll-smooth">
 
-        <div class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-md">
-            <div class="mb-8 p-4 bg-blue-50 rounded-lg border border-blue-200">
-                <p class="text-lg font-semibold text-blue-800 mb-2">Service: <span class="font-normal text-gray-700">Selected Service Name</span></p>
-                <p class="text-lg font-semibold text-blue-800 mb-2">Application ID: <span class="font-normal text-gray-700">APP-123456789</span></p>
-                <p class="text-2xl font-bold text-blue-900">Amount Due: <span class="text-green-600">৳50.00</span></p>
+  <section id="payment-page" class="container mx-auto py-12 px-4">
+    <div class="text-center mb-10">
+      <h3 class="text-3xl font-bold ">Payment Gateway</h3>
+      <p class="text-lg text-white mt-2 max-w-2xl mx-auto">
+        Please complete your payment to finalize your application.
+      </p>
+    </div>
+
+    <div class="max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-lg">
+      <!-- Payment Summary -->
+      <div class="mb-8 p-4 bg-blue-50 rounded-lg border border-blue-200">
+        <p class="text-md font-semibold text-blue-800">Service: <span class="font-normal text-gray-700">Selected Service Name</span></p>
+        <p class="text-md font-semibold text-blue-800">Application ID: <span class="font-normal text-gray-700">APP-123456789</span></p>
+        <p class="text-xl font-bold text-blue-900 mt-2">Amount Due: <span class="text-green-600">৳50.00</span></p>
+      </div>
+
+      <!-- Payment Content Area -->
+      <div id="payment-content" class="mt-6">
+        
+        <!-- Mobile Banking Panel -->
+        <div id="mobile-banking-panel" class="payment-panel">
+           <h4 class="text-xl font-semibold text-gray-800 mb-4 flex items-center border-b pb-3">
+             <svg class="w-6 h-6 mr-3 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+             Pay with Mobile Banking
+           </h4>
+          <div class="space-y-4 mt-4">
+            <div>
+              <label for="provider-select" class="block text-sm font-medium text-gray-700">Select Provider</label>
+              <select id="provider-select" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md text-gray-700 ">
+                <option value="">-- Choose --</option>
+                <option value="bKash">bKash</option>
+                <option value="Nagad">Nagad</option>
+                <option value="Rocket">Rocket</option>
+              </select>
             </div>
-
-            <h4 class="text-2xl font-semibold text-gray-900 mb-6 border-b pb-2">Choose Payment Method</h4>
-
-            <!-- Credit Card Payment -->
-            <div class="mb-8 p-6 border border-gray-200 rounded-lg bg-gray-50">
-                <h5 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
-                    <svg class="w-7 h-7 mr-2 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg>
-                    Credit Card
-                </h5>
-                <form class="space-y-4">
-                    <div>
-                        <label for="card-number" class="block text-sm font-medium text-gray-700 mb-1">Card Number</label>
-                        <input type="text" id="card-number" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="XXXX XXXX XXXX XXXX">
-                    </div>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div>
-                            <label for="expiry-date" class="block text-sm font-medium text-gray-700 mb-1">Expiry Date (MM/YY)</label>
-                            <input type="text" id="expiry-date" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="MM/YY">
-                        </div>
-                        <div>
-                            <label for="cvv" class="block text-sm font-medium text-gray-700 mb-1">CVV</label>
-                            <input type="text" id="cvv" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="XXX">
-                        </div>
-                    </div>
-                    <div>
-                        <label for="card-name" class="block text-sm font-medium text-gray-700 mb-1">Name on Card</label>
-                        <input type="text" id="card-name" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="Full Name">
-                    </div>
-                </form>
-            </div>
-
-            <!-- Mobile Banking Payment -->
-            <div class="mb-8 p-6 border border-gray-200 rounded-lg bg-gray-50">
-                <h5 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
-                    <svg class="w-7 h-7 mr-2 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
-                    Mobile Banking
-                </h5>
-                <p class="text-gray-700 mb-4">Select your mobile banking provider and follow the instructions.</p>
-                <select class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md">
-                    <option>Select Provider</option>
-                    <option>bKash</option>
-                    <option>Nagad</option>
-                    <option>Rocket</option>
-                    <option>Upay</option>
-                </select>
-                <p class="text-sm text-gray-500 mt-2">Instructions will appear here after selecting a provider.</p>
-            </div>
-
-            <!-- Online Web Bank Transfer Payment -->
-            <div class="p-6 border border-gray-200 rounded-lg bg-gray-50">
-                <h5 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
-                    <svg class="w-7 h-7 mr-2 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2z"></path></svg>
-                    Online Web Bank Transfer
-                </h5>
-                <p class="text-gray-700 mb-4">You will be redirected to your bank's portal to complete the transfer.</p>
-                <select class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md">
-                    <option>Select Bank</option>
-                    <option>Bank A</option>
-                    <option>Bank B</option>
-                    <option>Bank C</option>
-                </select>
-            </div>
-
-            <div class="text-center mt-10">
-                <button type="button" onclick="window.location.href='user-dashboard.html'" class="inline-flex justify-center py-3 px-8 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition duration-300">
-                    Confirm Payment
-                </button>
-            </div>
+            <div id="mobile-banking-instructions" class="p-4 bg-gray-50 rounded-md border border-gray-200 text-gray-600 text-sm hidden"></div>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <script src="../js/script.js"></script>
+      <!-- Confirmation Button -->
+      <div class="text-center mt-8">
+      <a href="../section/user-dashboard.html"  class="w-full inline-flex justify-center py-3 px-8 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-300">  <button type="button">
+          Confirm Payment
+        </button>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const providerSelect = document.getElementById('provider-select');
+      const instructionsDiv = document.getElementById('mobile-banking-instructions');
+
+      // --- Mobile Banking Instructions Logic ---
+      const instructions = {
+        bKash: `
+          <h6 class="font-semibold text-gray-800 mb-2">bKash Payment Instructions</h6>
+          <ol class="list-decimal list-inside space-y-1">
+            <li>Go to your bKash App or dial <strong>*247#</strong>.</li>
+            <li>Choose 'Payment'.</li>
+            <li>Enter our merchant number: <strong>01XXXXXXXXX</strong></li>
+            <li>Enter amount: <strong>৳50.00</strong></li>
+            <li>Enter reference: <strong>APP-123456789</strong></li>
+            <li>Enter your PIN to confirm.</li>
+            <li>After payment, enter the Transaction ID (TrxID) below.</li>
+          </ol>
+          <div class="mt-4">
+            <label for="trxId" class="block text-sm font-medium text-gray-700">Transaction ID (TrxID)</label>
+            <input type="text" id="trxId" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm" placeholder="e.g., 9G7H3F2J1K">
+          </div>
+        `,
+        Nagad: `
+          <h6 class="font-semibold text-gray-800 mb-2">Nagad Payment Instructions</h6>
+           <ol class="list-decimal list-inside space-y-1">
+            <li>Go to your Nagad App or dial <strong>*167#</strong>.</li>
+            <li>Choose 'Payment'.</li>
+            <li>Enter our merchant number: <strong>01XXXXXXXXX</strong></li>
+            <li>Enter amount: <strong>৳50.00</strong></li>
+            <li>Enter reference: <strong>APP-123456789</strong></li>
+            <li>Enter your PIN to confirm.</li>
+            <li>After payment, enter the Transaction ID (TrxID) below.</li>
+          </ol>
+           <div class="mt-4">
+            <label for="trxId" class="block text-sm font-medium text-gray-700">Transaction ID (TrxID)</label>
+            <input type="text" id="trxId" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm" placeholder="e.g., 9G7H3F2J1K">
+          </div>
+        `,
+        Rocket: `
+          <h6 class="font-semibold text-gray-800 mb-2">Rocket Payment Instructions</h6>
+           <ol class="list-decimal list-inside space-y-1">
+            <li>Go to your Rocket App or dial <strong>*322#</strong>.</li>
+            <li>Choose 'Payment'.</li>
+            <li>Enter our merchant number: <strong>01XXXXXXXXX</strong></li>
+            <li>Enter amount: <strong>৳50.00</strong></li>
+            <li>Enter reference: <strong>APP-123456789</strong></li>
+            <li>Enter your PIN to confirm.</li>
+            <li>After payment, enter the Transaction ID (TrxID) below.</li>
+          </ol>
+           <div class="mt-4">
+            <label for="trxId" class="block text-sm font-medium text-gray-700">Transaction ID (TrxID)</label>
+            <input type="text" id="trxId" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm" placeholder="e.g., 9G7H3F2J1K">
+          </div>
+        `
+      };
+
+      providerSelect.addEventListener('change', function() {
+        const selectedProvider = this.value;
+        if (selectedProvider && instructions[selectedProvider]) {
+          instructionsDiv.innerHTML = instructions[selectedProvider];
+          instructionsDiv.classList.remove('hidden');
+        } else {
+          instructionsDiv.classList.add('hidden');
+          instructionsDiv.innerHTML = '';
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
