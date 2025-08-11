@@ -191,7 +191,7 @@ function redirectToPayment() {
 
         // If all good → redirect
         if (valid) {
-          window.location.href = "../section/User-Dashboard.html";
+          window.location.href = "../section/userdashboard.html";
         }
       });
     });
