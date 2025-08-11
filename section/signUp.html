@@ -70,21 +70,26 @@
             <input type="password" id="password" name="password" class="block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="Password" required>
           </div>
           <!-- Confirm Password Field -->
-          <div>
-            <label for="confirm-password" class="sr-only">Confirm Password</label>
-            <input type="password" id="confirm-password" name="confirm-password" class="block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="Confirm Password" required>
-          </div>
-          <!-- Submit Button -->
-        <a href="../section/login.html"  class="w-full inline-flex justify-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-300">  <button type="submit">
-            Sign Up
-          </button>
-          </a>
+
+  <div>
+    <label for="confirm-password" class="sr-only">Confirm Password</label>
+    <input type="password" id="confirm-password" name="confirm-password" class="block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="Confirm Password" required>
+</div>
+
+<p id="password-error" class="text-red-500 text-sm mt-1 h-4"></p>
+
+<a id="signup-link" href="../section/login.html" class="w-full inline-flex justify-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-300">
+    Sign Up
+</a>
+
+
         </form>
       </div>
     </div>
   </section>
 
-  <!-- You would link your JS file here for background slideshows or form validation
-  <script src="../js/script.js"></script> -->
+  <!-- You would link your JS file here for background slideshows or form validation  -->
+
+  <script src="../js/script.js"></script>
 </body>
 </html>

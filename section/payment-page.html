@@ -10,7 +10,6 @@
   <style>
     body {
       font-family: 'Inter', sans-serif;
-      /* background-color: #f3f4f6;  */
     }
     .payment-panel {
       animation: fadeIn 0.5s ease-out forwards;
@@ -20,14 +19,13 @@
       to { opacity: 1; transform: translateY(0); }
     }
   </style>
-      <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body id="Background" class="scroll-smooth">
 
   <section id="payment-page" class="container mx-auto py-12 px-4">
     <div class="text-center mb-10">
       <h3 class="text-3xl font-bold ">Payment Gateway</h3>
-      <p class="text-lg text-white mt-2 max-w-2xl mx-auto">
+      <p class="text-lg text-gray-700 mt-2 max-w-2xl mx-auto">
         Please complete your payment to finalize your application.
       </p>
     </div>
@@ -52,12 +50,13 @@
           <div class="space-y-4 mt-4">
             <div>
               <label for="provider-select" class="block text-sm font-medium text-gray-700">Select Provider</label>
-              <select id="provider-select" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md text-gray-700 ">
+              <select id="provider-select" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md text-gray-700">
                 <option value="">-- Choose --</option>
                 <option value="bKash">bKash</option>
                 <option value="Nagad">Nagad</option>
                 <option value="Rocket">Rocket</option>
               </select>
+              <p id="provider-error" class="text-red-500 text-sm mt-1 hidden">Please select a payment provider.</p>
             </div>
             <div id="mobile-banking-instructions" class="p-4 bg-gray-50 rounded-md border border-gray-200 text-gray-600 text-sm hidden"></div>
           </div>
@@ -66,83 +65,14 @@
 
       <!-- Confirmation Button -->
       <div class="text-center mt-8">
-      <a href="../section/user-dashboard.html"  class="w-full inline-flex justify-center py-3 px-8 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-300">  <button type="button">
+        <button id="confirm-btn" 
+          class="w-full inline-flex justify-center py-3 px-8 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-300">
           Confirm Payment
         </button>
-        </a>
       </div>
     </div>
   </section>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const providerSelect = document.getElementById('provider-select');
-      const instructionsDiv = document.getElementById('mobile-banking-instructions');
-
-      // --- Mobile Banking Instructions Logic ---
-      const instructions = {
-        bKash: `
-          <h6 class="font-semibold text-gray-800 mb-2">bKash Payment Instructions</h6>
-          <ol class="list-decimal list-inside space-y-1">
-            <li>Go to your bKash App or dial <strong>*247#</strong>.</li>
-            <li>Choose 'Payment'.</li>
-            <li>Enter our merchant number: <strong>01XXXXXXXXX</strong></li>
-            <li>Enter amount: <strong>৳50.00</strong></li>
-            <li>Enter reference: <strong>APP-123456789</strong></li>
-            <li>Enter your PIN to confirm.</li>
-            <li>After payment, enter the Transaction ID (TrxID) below.</li>
-          </ol>
-          <div class="mt-4">
-            <label for="trxId" class="block text-sm font-medium text-gray-700">Transaction ID (TrxID)</label>
-            <input type="text" id="trxId" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm" placeholder="e.g., 9G7H3F2J1K">
-          </div>
-        `,
-        Nagad: `
-          <h6 class="font-semibold text-gray-800 mb-2">Nagad Payment Instructions</h6>
-           <ol class="list-decimal list-inside space-y-1">
-            <li>Go to your Nagad App or dial <strong>*167#</strong>.</li>
-            <li>Choose 'Payment'.</li>
-            <li>Enter our merchant number: <strong>01XXXXXXXXX</strong></li>
-            <li>Enter amount: <strong>৳50.00</strong></li>
-            <li>Enter reference: <strong>APP-123456789</strong></li>
-            <li>Enter your PIN to confirm.</li>
-            <li>After payment, enter the Transaction ID (TrxID) below.</li>
-          </ol>
-           <div class="mt-4">
-            <label for="trxId" class="block text-sm font-medium text-gray-700">Transaction ID (TrxID)</label>
-            <input type="text" id="trxId" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm" placeholder="e.g., 9G7H3F2J1K">
-          </div>
-        `,
-        Rocket: `
-          <h6 class="font-semibold text-gray-800 mb-2">Rocket Payment Instructions</h6>
-           <ol class="list-decimal list-inside space-y-1">
-            <li>Go to your Rocket App or dial <strong>*322#</strong>.</li>
-            <li>Choose 'Payment'.</li>
-            <li>Enter our merchant number: <strong>01XXXXXXXXX</strong></li>
-            <li>Enter amount: <strong>৳50.00</strong></li>
-            <li>Enter reference: <strong>APP-123456789</strong></li>
-            <li>Enter your PIN to confirm.</li>
-            <li>After payment, enter the Transaction ID (TrxID) below.</li>
-          </ol>
-           <div class="mt-4">
-            <label for="trxId" class="block text-sm font-medium text-gray-700">Transaction ID (TrxID)</label>
-            <input type="text" id="trxId" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm" placeholder="e.g., 9G7H3F2J1K">
-          </div>
-        `
-      };
-
-      providerSelect.addEventListener('change', function() {
-        const selectedProvider = this.value;
-        if (selectedProvider && instructions[selectedProvider]) {
-          instructionsDiv.innerHTML = instructions[selectedProvider];
-          instructionsDiv.classList.remove('hidden');
-        } else {
-          instructionsDiv.classList.add('hidden');
-          instructionsDiv.innerHTML = '';
-        }
-      });
-    });
-  </script>
-
+  <script src="../js/script.js"></script>
 </body>
 </html>
