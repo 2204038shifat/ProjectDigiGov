@@ -5,9 +5,9 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!slideshow) return; // Ensure element exists
 
     const images = [
-        "url('../image/a.jpeg')",
-        "url('../image/b.jpg')",
-        "url('../image/c.jpeg')"
+        "url('./image/a.jpeg')",
+        "url('./image/b.jpg')",
+        "url('./image/c.jpeg')"
     ];
 
     let currentIndex = 0;
